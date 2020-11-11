@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Grid from './components/Grid/Grid';
+import VisualGrid from './components/Grid/Grid';
 
 const useStyles = makeStyles({
   root: {
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <Grid />
+      <VisualGrid />
     </div>
   );
 }
