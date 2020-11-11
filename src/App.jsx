@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     color: "white",
+    paddingBottom: "3rem"
   },
 });
 
