@@ -14,6 +14,8 @@ import {
 import banner from "../../images/banner.jpg";
 import soonCard from "../../images/soon.png";
 
+import { CardData } from "./data/card-data";
+
 const useStyles = makeStyles((theme) => ({
   heroImage: {
     maskImage: "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))",
@@ -60,69 +62,28 @@ const VisualGrid = () => {
           All Games
         </Typography>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card>
-              <CardActionArea>
-                <CardMedia className={classes.media} image={soonCard} />
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Up-stairs
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    align="left"
-                  >
-                    Jump towards the appearing stairs to increase your final
-                    score.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card>
-              <CardActionArea>
-                <CardMedia className={classes.media} image={soonCard} />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Tetris Arcade
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    align="left"
-                  >
-                    Jump towards the appearing stairs to increase your final
-                    score.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card>
-              <CardActionArea>
-                <CardMedia className={classes.media} image={soonCard} />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Poop-sweeper
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    align="left"
-                  >
-                    Jump towards the appearing stairs to increase your final
-                    score.
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </Grid>
+          {CardData.map((item, index) => (
+            <Grid key={index} item xs={12} sm={6} md={4}>
+              <Card>
+                <CardActionArea>
+                  <CardMedia className={classes.media} image={soonCard} />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {item.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                      align="left"
+                    >
+                      {item.description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </>
