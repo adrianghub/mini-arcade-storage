@@ -1,30 +1,26 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Btn from './components/Btn/Btn';
-import { useStateValue } from "./context/StateProvider";
+import Grid from './components/Grid/Grid';
 
 const useStyles = makeStyles({
   root: {
     textAlign: "center",
-    backgroundColor: "#282c34",
+    backgroundColor: "#282C8C",
     minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
     color: "white",
   },
 });
 
 function App() {
   const classes = useStyles();
-  const [{ counter }] = useStateValue();
 
   return (
     <div className={classes.root}>
-      <Btn />
-      <p>{counter}</p>
+      <Grid />
     </div>
   );
 }
