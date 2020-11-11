@@ -1,14 +1,14 @@
 export const CardData = [
   {
-    title: "Up-stairs",
-    description: "Jump towards the appearing stairs to increase your final score.",
+    title: "Octo-jump",
+    description: "Control the octagonal by jumping on the branches that appear constantly to increase your final score.",
   },
   {
     title: "Tetris Arcade",
-    description: "Jump towards the appearing stairs to increase your final score.",
+    description: "Coming soon...",
   },
   {
     title: "Poop-sweeper",
-    description: "Jump towards the appearing stairs to increase your final score.",
+    description: "Coming soon...",
   },
 ]
