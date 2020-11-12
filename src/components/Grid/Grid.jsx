@@ -10,10 +10,9 @@ import {
   Typography,
   Grid,
 } from "@material-ui/core";
+import { ExternalLink } from "react-external-link";
 
 import banner from "../../images/banner.jpg";
-import soonCard from "../../images/soon.png";
-
 import { CardData } from "./data/card-data";
 
 const useStyles = makeStyles((theme) => ({
@@ -66,7 +65,12 @@ const VisualGrid = () => {
             <Grid key={index} item xs={12} sm={6} md={4}>
               <Card>
                 <CardActionArea>
-                  <CardMedia className={classes.media} image={soonCard} />
+                  <ExternalLink href={item.link}>
+                    <CardMedia
+                      className={classes.media}
+                      image={item.featuredImage}
+                    />
+                  </ExternalLink>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       {item.title}
